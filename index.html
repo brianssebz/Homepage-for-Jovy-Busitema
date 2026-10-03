@@ -27,7 +27,7 @@ flex-direction: column;
 }
 header {
 background-color: #ffffff;
-padding: 25px 40px;
+padding: 20px 40px;
 border-bottom: 3px solid #1a73e8;
 display: flex;
 align-items: center;
@@ -39,8 +39,11 @@ align-items: center;
 gap: 20px;
 }
 .logo-container img {
+width: 80px;
 height: 90px;
+object-fit: contain;
 width: auto;
+height: auto;
 }
 .logo-text h2 {
 color: #0b2545;
@@ -85,7 +88,6 @@ padding: 0 40px;
 .hero {
 text-align: center;
 margin: 40px 0;
-background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
 padding: 50px;
 border-radius: 15px;
 box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -117,10 +119,10 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 .slider {
 display: flex;
 width: 600%;
-animation: slideAnimation 30s infinite;
+animation: slideAnimation 20s infinite;
 }
 .slide {
-width: 16.6667%;
+width: 16.667%;
 }
 .slide img {
 width: 100%;
@@ -130,10 +132,10 @@ display: block;
 }
 @keyframes slideAnimation {
 0%, 16% { transform: translateX(0%); }
-20%, 36% { transform: translateX(-16.6667%); }
-40%, 56% { transform: translateX(-33.3333%); }
+20%, 36% { transform: translateX(-16.667%); }
+40%, 56% { transform: translateX(-33.333%); }
 60%, 76% { transform: translateX(-50%); }
-80%, 96% { transform: translateX(-66.6667%); }
+80%, 96% { transform: translateX(-66.667%); }
 100% { transform: translateX(0%); }
 }
 .info-section {
@@ -157,9 +159,6 @@ transform: translateY(-5px);
 color: #0b2545;
 margin-bottom: 20px;
 font-size: 1.8rem;
-display: flex;
-align-items: center;
-gap: 15px;
 }
 .info-card p {
 color: #555;
@@ -202,7 +201,6 @@ font-size: 1.3rem;
 }
 .club-card p {
 color: #555;
-font-size: 1rem;
 }
 footer {
 background-color: #0b2545;
@@ -224,22 +222,59 @@ color: #64ffda;
 text-decoration: none;
 font-weight: 600;
 }
-@media (max-width: 1024px) {
-.info-section {
-grid-template-columns: 1fr;
-}
-}
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
 header {
+padding: 15px 20px;
 flex-direction: column;
-gap: 20px;
+gap: 15px;
+}
+.logo-container {
+gap: 10px;
+}
+.logo-container img {
+width: 60px;
+height: 70px;
+}
+.logo-text h2 {
+font-size: 1.2rem;
+}
+nav ul {
+gap: 15px;
+}
+nav ul li a {
+font-size: 1rem;
+}
+.header-contacts {
 text-align: center;
 }
 main {
 padding: 0 20px;
 }
 .hero {
-padding: 30px;
+padding: 30px 20px;
+margin: 20px 0;
+}
+.hero h1 {
+font-size: 2rem;
+}
+.hero p.tagline {
+font-size: 1.2rem;
+}
+.info-section {
+grid-template-columns: 1fr;
+gap: 20px;
+margin-bottom: 40px;
+}
+.slider-container {
+margin: 0 auto 40px auto;
+}
+.slide img {
+height: 250px;
+}
+.clubs-section {
+padding: 30px 20px;
+margin-bottom: 40px;
 }
 }
 </style>
@@ -248,10 +283,10 @@ padding: 30px;
 <div class="page-wrapper">
 <header>
 <div class="logo-container">
-<img src="./LOGO.png" alt="Busitema University Logo">
+<img src="LOGO.png" alt="Busitema University Logo">
 <div class="logo-text">
 <h2>BUSITEMA UNIVERSITY</h2>
-<p>Center of Excellence</p>
+<p>Pursuing Excellence</p>
 </div>
 </div>
 <nav>
@@ -264,7 +299,7 @@ padding: 30px;
 </ul>
 </nav>
 <div class="header-contacts">
-<p>Tel: +256700686543</p>
+<p>Tel: +256700686543 / +256755432167</p>
 <p>Email: <a href="mailto:info@busitemauniversity.ac.ug">info@busitemauniversity.ac.ug</a></p>
 </div>
 </header>
@@ -276,12 +311,12 @@ padding: 30px;
 </section>
 <section class="slider-container">
 <div class="slider">
-<div class="slide"><img src="./PHOTO 1.jpg" alt="Campus Life"></div>
+<div class="slide"><img src="PHOTO 1.jpg" alt="Campus Life"></div>
 <div class="slide"><img src="./2.jpg" alt="Modern Facilities"></div>
 <div class="slide"><img src="./3.jpg" alt="Student Activities"></div>
 <div class="slide"><img src="./4.jpg" alt="Graduation Ceremony"></div>
 <div class="slide"><img src="./5.png" alt="Campus Grounds"></div>
-<div class="slide"><img src="./PHOTO 1.jpg" alt="Seamless Loop"></div>
+<div class="slide"><img src="PHOTO 1.jpg" alt="Seamless Loop"></div>
 </div>
 </section>
 <section class="info-section">
@@ -311,7 +346,7 @@ padding: 30px;
 </div>
 <div class="club-card">
 <h3>Guild Union & Sports</h3>
-<p>Manages guild activities, student leadership programs, and diverse sports competitions including football, athletics, drama, and musical performances.</p>
+<p>Manages guild activities, student leadership programs, and diverse sports competitions.</p>
 </div>
 </div>
 </section>
@@ -319,7 +354,7 @@ padding: 30px;
 <footer>
 <div class="footer-content">
 <p>Busitema University, P.O. Box 145, Jinja, Uganda.</p>
-<p>Tel: +256700686543 / +256755432167 </p>
+<p>Tel: +256700686543 / +256755432167</p>
 <p>Email: <a href="mailto:info@busitemauniversity.ac.ug">info@busitemauniversity.ac.ug</a></p>
 <p>© 2026 Busitema University. All Rights Reserved.</p>
 </div>
